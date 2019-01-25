@@ -17,7 +17,7 @@ import org.glassfish.jersey.server.ChunkedOutput;
 /**
  * Root resource (exposed at "statictweets" path)
  */
-@Path("statictweets2")
+@Path("statictweets")
 public class StaticTweets {
 
     private static SampleStreamExample example = new SampleStreamExample();
@@ -120,12 +120,16 @@ public class StaticTweets {
      * @return String that will be returned as an application/json response.
      */
     @GET
-    @Path("test")
+    @Path("stuckthread")
     @Produces(MediaType.APPLICATION_JSON)
     public Response test() {
-
-    	String response = "Payload PH TEST!!";
     	
+    	int sleepTime = 30000;
+    	String response = "Request completed after "+30000 +" ms";
+    	
+		// try to block other threads...
+		try {Thread.sleep(sleepTime); } catch (InterruptedException e) {}
+		
     	return Response.ok()
     			.entity(response)
     			.header("Access-Control-Allow-Origin", "*")
