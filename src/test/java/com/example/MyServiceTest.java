@@ -43,7 +43,7 @@ public class MyServiceTest {
      */
      @Test
     public void testGetStaticTweets() {
-        String responseMsg = target.path("statictweets").request().get(String.class);
+        String responseMsg = target.path("statictweets2").request().get(String.class);
         assertNotNull(responseMsg);
     } 
     /*
@@ -74,7 +74,7 @@ public class MyServiceTest {
     
     @Test
     public void testStuckThread() {
-        String responseMsg = target.path("statictweets/test").request().get(String.class);
+        String responseMsg = target.path("statictweets2/test").request().get(String.class);
         System.out.println("OK!!!!!! >>"+responseMsg);
         assertNotNull(responseMsg);
     }
