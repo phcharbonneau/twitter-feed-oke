@@ -31,7 +31,7 @@ public class StuckThreadController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
 
-    	String response = "Payload PH TEST!!";
+    	String response = "Payload PH TEST!!"
     	
     	return Response.ok()
     			.entity(response)
