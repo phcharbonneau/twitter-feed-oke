@@ -27,6 +27,7 @@ public class StuckThreadController {
      * @return String that will be returned as an application/json response.
      */
     @GET
+    @Path("test")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
 

@@ -72,4 +72,10 @@ public class MyServiceTest {
         assertNotNull(responseMsg);
     }
     
+    @Test
+    public void testStuckThread() {
+        String responseMsg = target.path("stuckthread/test").request().get(String.class);
+        System.out.println("OK!!!!!! >>"+responseMsg);
+        assertNotNull(responseMsg);
+    }
 }
