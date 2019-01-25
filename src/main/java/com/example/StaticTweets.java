@@ -113,5 +113,23 @@ public class StaticTweets {
         // a first chunk is written by the new thread
 	}
 
+	/**
+     * Method handling HTTP GET requests. The returned object will be sent
+     * to the client as "text/plain" media type.
+     *
+     * @return String that will be returned as an application/json response.
+     */
+    @GET
+    @Path("test")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response test() {
 
+    	String response = "Payload PH TEST!!";
+    	
+    	return Response.ok()
+    			.entity(response)
+    			.header("Access-Control-Allow-Origin", "*")
+    			.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+    			.build();
+    }
 }
