@@ -17,7 +17,7 @@ import org.glassfish.jersey.server.ChunkedOutput;
 /**
  * Root resource (exposed at "statictweets" path)
  */
-@Path("statictweets")
+@Path("statictweets2")
 public class StaticTweets {
 
     private static SampleStreamExample example = new SampleStreamExample();
