@@ -18,7 +18,7 @@ import org.glassfish.jersey.server.ChunkedOutput;
  * Root resource (exposed at "statictweets" path)
  */
 @Path("stuckthread")
-public class StuckThreadController {
+public class StuckThread {
 	
 	/**
      * Method handling HTTP GET requests. The returned object will be sent
@@ -31,7 +31,7 @@ public class StuckThreadController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
 
-    	String response = "Payload PH TEST!!"
+    	String response = "Payload PH TEST!!";
     	
     	return Response.ok()
     			.entity(response)
