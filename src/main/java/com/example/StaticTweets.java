@@ -125,7 +125,7 @@ public class StaticTweets {
     @Produces(MediaType.APPLICATION_JSON)
     public Response test() {
     	
-    	int sleepTime = 4000;
+    	int sleepTime = 6000;
     	String response = "Request completed after "+sleepTime +" ms";
     	
 		// try to block other threads...
